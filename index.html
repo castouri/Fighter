@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- Name of yur theme -->
+	<title>My New Theme</title>
+
+<!--
+	<palette class="palette-default" name="HealthTeacher palette" preview="#9BBF27,#5999E3">
+-->
+
+	<!-- Add any styles your theme requires here -->
+	<link rel="stylesheet/less" type="text/css" href="styles/main.less">
+	<!-- This script loads the Populr theming engine. Populr will automatically
+	remove it at runtime. -->
+	<script src="http://populr.me/assets/developers/themer.js"></script>
+	<!-- Add any javscript your theme requires here -->
+	<script src="js/main.js"></script>
+</head>
+<body>
+
+	<!-- Put your theme's inside this script tag. The script tag will
+	prevent issues with quote escaping and invalid markup. -->
+	<script id="theme" type="text/x-handlebars-template">
+	
+	<div class="bottom-shade">
+
+		<div class="header">
+			<div class="black_mid">{{{title}}}</div>
+		</div>
+
+		<div class="main-region-outer">
+		{{#region "packer" id="main-region" columns="3" column_width="238" gutter_width="10" dummy_content="T-1-l,T-1-m,T-1-s,T-1-s,T-1-s,T-1-s,I-1-l,I-1-m,I-1-s,I-1-s,I-1-s,I-1-s,V-5-l,V-1-m,V-1-s,V-1-s,V-1-s,V-1-s,D-6-l,D-4-m,D-4-s,D-4-s,D-4-s,D-4-s,E-1-l,E-1-m,E-1-s,E-1-s,E-1-s,E-1-s" max_auto_assets="1" sizes="l,m,s" default_size="m"}}
+
+			{{#asset "text" size="l"}}
+				{{{title}}}
+				{{{body}}}
+			{{/asset}}
+
+			{{#asset "text" size="m"}}
+				{{{title}}}
+				{{{body}}}
+			{{/asset}}
+
+			{{#asset "text" size="s"}}
+				{{{title}}}
+				{{{body}}}
+			{{/asset}}
+
+			{{#asset "imagegroup" size="l"}}
+				<div class="float-text">
+				{{{title}}}
+				{{{description}}}
+				</div>
+				{{{imageslider images width="770" height="420"}}}
+			{{/asset}}
+
+			{{#asset "imagegroup" size="m"}}
+				<div class="float-text">
+				{{{title}}}
+				{{{description}}}
+				</div>
+				{{{imageslider images width="504" height="250"}}}
+			{{/asset}}
+
+			{{#asset "imagegroup" size="s"}}
+				<div class="float-text">
+				{{{title}}}
+				{{{description}}}
+				</div>
+				{{{imageslider images width="238" height="190"}}}
+			{{/asset}}
+			{{#asset "videogroup" size="l"}}
+				{{{title}}}
+				{{{videoplayer contents width="778" height="420" resolution="large"}}}
+				{{{description}}}
+			{{/asset}}
+
+			{{#asset "videogroup" size="m"}}
+				{{{title}}}
+				{{{videoplayer contents width="512" height="250" resolution="medium"}}}
+				{{{description}}}
+			{{/asset}}
+
+			{{#asset "videogroup" size="s"}}
+				{{{title}}}
+				{{{videoplayer contents width="246" height="190" resolution="medium"}}}
+				{{{description}}}
+			{{/asset}}
+
+			{{#asset "documentgroup" size="l"}}
+			  {{{title}}}
+			  <div class="content">
+			  {{{description}}}
+				<ul class="documents">
+				{{#documents}}
+				   <li><div class="file-block"><a href="{{original_url}}"><span class="file-extension file-extension-{{extension}}"></span></a><a href="{{original_url}}"><span class="file-title">{{title}}</span></a><div class="filesize"><div class="floater"><a href="{{original_url}}"><span class="btndownload"></span></a></div>{{extension}}, <span>{{{format_file_size source_file_size}}}</span></div></div></li>
+				{{/documents}}
+				</ul>
+				<div class="clearfix"></div>
+			  </div>
+			{{/asset}}
+
+			{{#asset "documentgroup" size="m"}}
+			  {{{title}}}
+			  <div class="content">
+			  {{{description}}}
+				<ul class="documents">
+				{{#documents}}
+				 <li><div class="file-block"><a href="{{original_url}}"><span class="file-extension file-extension-{{extension}}"></span></a><a href="{{original_url}}"><span class="file-title">{{title}}</span></a><div class="filesize"><div class="floater"><a href="{{original_url}}"><span class="btndownload"></span></a></div>{{extension}}, <span>{{{format_file_size source_file_size}}}</span></div></div></li>
+				{{/documents}}
+				</ul>
+			  </div>
+			{{/asset}}
+
+			{{#asset "documentgroup" size="s"}}
+			  {{{title}}}
+			  <div class="content">
+			  {{{description}}}
+				<ul class="documents">
+				{{#documents}}
+				  <li><div class="file-block"><a href="{{original_url}}"><span class="file-extension file-extension-{{extension}}"></span></a><a href="{{original_url}}"><span class="file-title">{{title}}</span></a><div class="filesize">{{extension}}, <span>{{{format_file_size source_file_size}}}</span></div><a href="{{original_url}}"><span class="btndownload"></span></a></div></li>
+				{{/documents}}
+				</ul>
+			  </div>
+			{{/asset}}
+
+
+			{{#asset "embedgroup" size="l" width="776"}}
+			  {{{title}}}
+			  {{#embeds}}
+				<div class="embed">{{{html}}}</div>
+			  {{/embeds}}
+			  {{{description}}}
+			{{/asset}}
+
+			{{#asset "embedgroup" size="m" width="510"}}
+			  {{{title}}}
+			  {{#embeds}}
+				<div class="embed">{{{html}}}</div>
+			  {{/embeds}}
+			  {{{description}}}
+			{{/asset}}
+
+			{{#asset "embedgroup" size="s" width="244"}}
+			  {{{title}}}
+			  {{#embeds}}
+				<div class="embed">{{{html}}}</div>
+			  {{/embeds}}
+			  {{{description}}}
+			{{/asset}}
+
+		{{/region}}
+		</div>
+
+		<div class="bottom-region-outer">
+		{{#region "packer" id="bottom-region" columns="3" column_width="238" gutter_width="10" dummy_content="T-1-l,T-1-m,T-1-s,T-1-s,T-1-s,T-1-s,I-1-l,I-1-m,I-1-s,I-1-s,I-1-s,I-1-s,V-5-l,V-1-m,V-1-s,V-1-s,V-1-s,V-1-s,D-6-l,D-4-m,D-4-s,D-4-s,D-4-s,D-4-s,E-1-l,E-1-m,E-1-s,E-1-s,E-1-s,E-1-s" max_auto_assets="1" sizes="l,m,s" default_size="m"}}
+
+			{{#asset "text" size="l"}}
+				{{{title}}}
+				{{{body}}}
+			{{/asset}}
+
+			{{#asset "text" size="m"}}
+				{{{title}}}
+				{{{body}}}
+			{{/asset}}
+
+			{{#asset "text" size="s"}}
+				{{{title}}}
+				{{{body}}}
+			{{/asset}}
+
+			{{#asset "imagegroup" size="l"}}
+				<div class="float-text">
+				{{{title}}}
+				{{{description}}}
+				</div>
+				{{{imageslider images width="770" height="420"}}}
+			{{/asset}}
+
+			{{#asset "imagegroup" size="m"}}
+				<div class="float-text">
+				{{{title}}}
+				{{{description}}}
+				</div>
+				{{{imageslider images width="504" height="250"}}}
+			{{/asset}}
+
+			{{#asset "imagegroup" size="s"}}
+				<div class="float-text">
+				{{{title}}}
+				{{{description}}}
+				</div>
+				{{{imageslider images width="238" height="190"}}}
+			{{/asset}}
+			{{#asset "videogroup" size="l"}}
+				{{{title}}}
+				{{{videoplayer contents width="778" height="420" resolution="large"}}}
+				{{{description}}}
+			{{/asset}}
+
+			{{#asset "videogroup" size="m"}}
+				{{{title}}}
+				{{{videoplayer contents width="512" height="250" resolution="medium"}}}
+				{{{description}}}
+			{{/asset}}
+
+			{{#asset "videogroup" size="s"}}
+				{{{title}}}
+				{{{videoplayer contents width="246" height="190" resolution="medium"}}}
+				{{{description}}}
+			{{/asset}}
+
+			{{#asset "documentgroup" size="l"}}
+			  {{{title}}}
+			  <div class="content">
+			  {{{description}}}
+				<ul class="documents">
+				{{#documents}}
+				   <li><div class="file-block"><a href="{{original_url}}"><span class="file-extension file-extension-{{extension}}"></span></a><a href="{{original_url}}"><span class="file-title">{{title}}</span></a><div class="filesize"><div class="floater"><a href="{{original_url}}"><span class="btndownload"></span></a></div>{{extension}}, <span>{{{format_file_size source_file_size}}}</span></div></div></li>
+				{{/documents}}
+				</ul>
+				<div class="clearfix"></div>
+			  </div>
+			{{/asset}}
+
+			{{#asset "documentgroup" size="m"}}
+			  {{{title}}}
+			  <div class="content">
+			  {{{description}}}
+				<ul class="documents">
+				{{#documents}}
+				 <li><div class="file-block"><a href="{{original_url}}"><span class="file-extension file-extension-{{extension}}"></span></a><a href="{{original_url}}"><span class="file-title">{{title}}</span></a><div class="filesize"><div class="floater"><a href="{{original_url}}"><span class="btndownload"></span></a></div>{{extension}}, <span>{{{format_file_size source_file_size}}}</span></div></div></li>
+				{{/documents}}
+				</ul>
+			  </div>
+			{{/asset}}
+
+			{{#asset "documentgroup" size="s"}}
+			  {{{title}}}
+			  <div class="content">
+			  {{{description}}}
+				<ul class="documents">
+				{{#documents}}
+				  <li><div class="file-block"><a href="{{original_url}}"><span class="file-extension file-extension-{{extension}}"></span></a><a href="{{original_url}}"><span class="file-title">{{title}}</span></a><div class="filesize">{{extension}}, <span>{{{format_file_size source_file_size}}}</span></div><a href="{{original_url}}"><span class="btndownload"></span></a></div></li>
+				{{/documents}}
+				</ul>
+			  </div>
+			{{/asset}}
+
+
+			{{#asset "embedgroup" size="l" width="776"}}
+			  {{{title}}}
+			  {{#embeds}}
+				<div class="embed">{{{html}}}</div>
+			  {{/embeds}}
+			  {{{description}}}
+			{{/asset}}
+
+			{{#asset "embedgroup" size="m" width="510"}}
+			  {{{title}}}
+			  {{#embeds}}
+				<div class="embed">{{{html}}}</div>
+			  {{/embeds}}
+			  {{{description}}}
+			{{/asset}}
+
+			{{#asset "embedgroup" size="s" width="244"}}
+			  {{{title}}}
+			  {{#embeds}}
+				<div class="embed">{{{html}}}</div>
+			  {{/embeds}}
+			  {{{description}}}
+			{{/asset}}
+
+		{{/region}}
+		</div>
+
+
+		<div class="footer">
+				Copyright &copy; 2013 Fighter theme. All Rights Reserved.
+		</div>
+
+	</div>
+
+
+	</script>
+
+</body>
+</html>
